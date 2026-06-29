@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Workspace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top navy bar -->
+  <header class="topbar"></header>
+
+  <main class="container">
+
+    <!-- Page title -->
+    <section class="page-header">
+      <h1>Project Workspace</h1>
+      <p>Manage, track, and deploy your team milestones.</p>
+    </section>
+
+    <!-- Stat cards -->
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-label">TOTAL TASKS</span>
+        <span class="stat-value" id="statTotal">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">PENDING TASKS</span>
+        <span class="stat-value stat-pending" id="statPending">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">COMPLETED ITEMS</span>
+        <span class="stat-value stat-completed" id="statCompleted">0</span>
+      </div>
+    </section>
+
+    <!-- Main panel -->
+    <section class="panel">
+
+      <div class="panel-top">
+        <div class="tabs">
+          <button class="tab active" data-filter="all">All Tasks</button>
+          <button class="tab" data-filter="pending">Pending</button>
+          <button class="tab" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="add-task">
+          <input type="text" id="taskInput" placeholder="Create new high-priority milestone...">
+          <button id="addTaskBtn">+ Add Task</button>
+        </div>
+      </div>
+
+      <ul class="task-list" id="taskList"></ul>
+
+      <p class="empty-state" id="emptyState">No tasks yet. Add one above!</p>
+
+    </section>
+
+  </main>
+
+  <!-- Supabase client library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/index.js"></script>
+</body>
+</html>
