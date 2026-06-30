@@ -1,17 +1,12 @@
 console.count("index.js executed");
 console.trace("index.js execution");
 
-/* ===================================================================
-   STATE
-=================================================================== */
 
 
 let tasks = [];
 let currentFilter = "all";
 
-/* ===================================================================
-   SUPABASE CONFIG
-=================================================================== */
+
 
 const SUPABASE_URL = "https://mtyppdqnvtfoznqvudlz.supabase.co";
 const SUPABASE_ANON_KEY =
@@ -20,10 +15,6 @@ const SUPABASE_ANON_KEY =
 const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 
-
-/* ===================================================================
-   DATA LAYER
-=================================================================== */
 
 async function loadTasks() {
   const { data, error } = await db
